@@ -23,7 +23,6 @@
             overflow: hidden;
         }
 
-        /* Ambient Glowing Background Luar */
         .blob-1, .blob-2 {
             position: absolute;
             border-radius: 50%;
@@ -45,8 +44,6 @@
             bottom: -80px;
             right: -80px;
         }
-
-        /* CONTAINER KARTU UTAMA DENGAN BACKGROUND PAS LEBAR */
         .card {
             position: relative;
             z-index: 10;
@@ -57,7 +54,6 @@
             box-shadow: 0 20px 50px rgba(236, 72, 153, 0.25),
                         0 0 0 1px rgba(236, 72, 153, 0.3);
             text-align: center;
-            /* background-size: 100% 100% dipasang agar lebar background pas dengan kartu */
             background: url("{{ asset('backround.jpg') }}") center/100% 100% no-repeat;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -66,8 +62,6 @@
             transform: translateY(-6px);
             box-shadow: 0 25px 60px rgba(236, 72, 153, 0.4);
         }
-
-        /* Overlay Gelap Kaca Transparan */
         .card-overlay {
             background: rgba(15, 23, 42, 0.72);
             backdrop-filter: blur(3px);
@@ -214,7 +208,6 @@
     <div class="card">
         <div class="card-overlay">
             
-            <!-- Foto Profil Utama -->
             <div class="avatar-wrapper">
                 <div class="avatar-bg">
                     <img src="{{ asset('foto.jpeg') }}" alt="Foto Profil">

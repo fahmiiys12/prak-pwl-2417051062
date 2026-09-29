@@ -9,13 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('user', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+ public function up(): void
+{
+    Schema::create('user', function (Blueprint $table) {
+        $table->id();
+        $table->string('nama');
+        $table->string('npm');
+        $table->foreignId('kelas_id')->constrained('kelas');
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
